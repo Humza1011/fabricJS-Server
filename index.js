@@ -27,7 +27,7 @@ app.use(cors());
 app.use(morgan("tiny"));
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Success" });
+  res.status(200).json({ message: "FabricJS JSON to PDF Server" });
 });
 
 app.post("/fabric/convert-to-pdf", async (req, res) => {
@@ -161,5 +161,5 @@ app.use((err, req, res, next) => {
 });
 
 // Server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
